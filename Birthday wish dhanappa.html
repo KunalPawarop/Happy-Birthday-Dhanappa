@@ -1,0 +1,151 @@
+<html>
+  <head>
+  <title>Happy Birthday,Dhanappa</title>
+  </head>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4, #fbc2eb);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 80px 20px;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      font-weight: bold;
+      color: #f51b84;
+      text-shadow: 0 5px 15px rgba(83, 64, 255, 0.5);
+      animation: glow 1.2s infinite alternate;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: #4a004d;
+      margin: 15px 0;
+      animation: glow 0.9s infinite alternate;
+    }
+
+    @keyframes glow {
+      30% {
+        text-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      }
+      30% {
+        text-shadow: 0 10px 30px rgba(255, 64, 129, 1);
+      }
+    }
+
+    img {
+      border-radius: 20px;
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+      border: 6px solid #ff79b0;
+      margin: 30px 0;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      animation: float 3s ease-in-out infinite;
+      transition: transform 0.7s ease;
+    }
+
+    img:hover {
+      transform: scale(0.1);
+    }
+
+    @keyframes float {
+      120% {
+        transform: translateY(0);
+      }
+      90% {
+        transform: translateY(-20px);
+      }
+    }
+
+    #countdown {
+      font-size: 1.8rem;
+      color: #ff4081;
+      margin: 20px 0;
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 15px 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      display: inline-block;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 13px 35px;
+      font-size: 1.5rem;
+      background: linear-gradient(to right, #ff4081, #ff79b0);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      box-shadow: 0 10px 25px rgba(255, 64, 129, 0.4);
+      transition: transform 0.2ss ease, box-shadow 0.2s ease;
+    }
+
+    .button:hover {
+      transform: scale(2.1);
+      box-shadow: 0 15px 40px rgba(183, 158, 51, 0.6);
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 5px;
+      background-color: #e9ecb3;
+      color: rgb(136, 115, 232);
+      font-size: 2rem;
+      letter-spacing: 2px;
+      animation: glow 1.1s infinite alternate;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎉🎂 Happy Birthday,Dhanappa 🎂🎉</h1>
+    <p>Born on:20th April 2011</p>
+    <p>Countdown from your birth to now is:👇</p>
+    <div id="countdown"></div>
+    <img src="C:\Users\opkun\Desktop\My pic\WhatsApp Image 2025-04-01 at 17.47.40_4a28ef28.jpg" alt="Dhanappa's Photo">
+    <p>Happy birthday my friend Dhanappa ❤️ Wishing you a day filled with joy, laughter, and everything you love.
+       ❤️ May this year bring you all the happiness and success you deserve.❤️ </p>
+
+  </header>
+  <footer>
+     <marquee>
+      <p>❤️ Once Again,Happy Birthday ❤️</p>
+    </marquee>
+    <p>
+      -Kunal Pawar
+    </p>
+  </footer>
+
+  <script>
+    function updateCountdown() {
+      const birthDate = new Date('2011-04-20T00:00:00');
+      const now = new Date();
+      const diff = now - birthDate;
+
+      const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+      const days = Math.floor((diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        `${years} years, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
